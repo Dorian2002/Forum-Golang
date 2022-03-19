@@ -1,0 +1,29 @@
+.post {
+    width: 90%;
+    margin-left: 5%;
+    border: solid 1px;
+    padding: 3%;
+    padding-bottom: 6%;
+    background-color: rgb(129, 125, 120, 0.95);
+    margin-bottom: 2vh;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.content {
+    margin-bottom: 5px;
+}
+
+.post li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    padding: 5px;
+}
+
+footer {
+    margin-top: 100%;
+}

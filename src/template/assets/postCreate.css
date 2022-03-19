@@ -1,0 +1,27 @@
+.create {
+    grid-column: 1 / 4;
+    background-color: rgb(41, 41, 41, 0.99);
+    border: solid 3px ;
+    height: auto;
+    width: 35vw;
+    color: #f1f1f1;
+
+    padding: 5%;
+    margin-left:30vw;
+    margin-top: 15%;
+}
+
+.title {
+    border: none; 
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+}
+
+.content {
+    border:1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 20vh;
+    width: 30vw;
+}

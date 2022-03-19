@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum BBQ</title>
+    <link rel="stylesheet" type="text/css" href="./assets/login.css">
+    <link rel="stylesheet" href="./assets/base.css">
+</head>
+<body>
+
+    <header>
+                
+        <p class= "head-title"> BBQ entre amis </p>
+        
+        <ul class="liste-head">
+            <li><a href="login" class="button" >Login</a></li>
+            <li><a href="register" class="button">Register</a></li>
+        </ul>
+
+    </header>
+
+    <div class="loginbox">
+        <img src="./assets/images/avatar.png" class="avatar">
+        <h1>LOGIN</h1>
+        <form action="/login" method="POST">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter password">
+            <input type="submit" value="Login" placeholder="Login"><br>
+            
+            <div>
+            {{ if .IsLoging }}
+                {{ if .IsLog }}
+                    <p>Bienvenue au BBQ entre amis !</p>
+                    <meta http-equiv="refresh" content="2; URL=home">
+                {{ else }}
+                <p>Certains champs renseignés sont mauvais, veuillez réessayer.</p>
+                {{ end }}
+            {{ else}}
+                <p>Certains champs renseignés sont vides, veuillez réessayer. </p>
+            {{ end }}
+            </div>
+        <a href="register">vous n'avez pas de compte ?</a><br>
+        </form>
+    </div>
+</body>
+
+
+
+</html>

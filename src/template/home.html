@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Forum BBQ</title>
+        <link rel="stylesheet" href="./assets/base.css">
+        <link rel="stylesheet" href="./assets/post.css">
+        <link rel="stylesheet" href="./assets/home.css">
+
+    </head>
+
+    <body>
+        <div class="container-grille">
+
+            <header>
+                
+            <p class= "head-title"> BBQ entre amis </p>
+            
+            <ul class="liste-head">
+                <li><a href="login" class="button" >Login</a></li>
+                <li><a href="register" class="button">Register</a></li>
+            </ul>
+
+            </header>   
+
+            <nav>
+                <div class="user">
+                    <p class="navtitle">Navigation:</p>
+                    <ul class="liste-sidenav">
+                        <li><a href="profil" class="button">profil</a></li>
+                        <li><a href="postCreate" class="button">new post</a></li>
+                        <li><a href="#" class="button">My posts</a></li>
+                        <li><a href="#" class="button">My comments</a></li>
+                        <li><a href="#" class="button">My likes</a></li>
+                        <li>
+                            <form action="/logout" method="POST" >
+                                <input type="submit" name="logout" value="Logout" placeholder="Logout" class="button"
+                                style="border:none;
+                                        background:none;
+                                        font-family:Arial;
+                                        font-size:18px;
+                                        font-weight:bold;">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+    
+            <main>
+
+                <div>
+                    <h1>Posté récemment:</h1>
+                    {{ range $PostContent := . }}
+                        <div class="post">
+                            <p class="title"> {{ $PostContent.Title }} </p>
+                            <p class="content">{{ $PostContent.Content }}</p>
+                            <ul class="select">
+                                <li>like</li>
+                                <li>comment</li>
+                            </ul>
+                        </div>
+                    {{ end }}
+                    <div class="comble"></div>
+                </div>
+    
+            </main>
+            <aside>
+                <form action="/home">
+                <div class="filterbox">
+
+                    <p class="filtertitle"> Catégories:</p>
+
+                        <div class="atributs">
+                            <div>
+                                <input type="checkbox" id="1" name="tag1">
+                                <label for="1">Sauces</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="2" name="tag2">
+                                <label for="2">Viandes</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="5" name="tag5">
+                                <label for="5">Accompagnement</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="3" name="tag3">
+                                <label for="3">Vegan</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="4" name="tag4">
+                                <label for="4">Equipements</label>
+                            </div>
+                        </div>
+                    
+                        <p class="filtertitle"> Date:</p>
+                     
+                        <div class="atributs">
+                            <div>
+                                <input type="checkbox" id="2" name="tag2">
+                                <label for="2"> Croissant </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="5" name="tag5">
+                                <label for="5"> Décroissant </label>
+                            </div>
+                        </div>
+
+                        <p class="filtertitle"> Likes:</p>
+
+                        <div class="atributs">
+                            <div>
+                                <input type="checkbox" id="2" name="tag2">
+                                <label for="2"> Croissant </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="5" name="tag5">
+                                <label for="5"> Décroissant </label>
+                            </div>
+                            <br>
+                        </div>
+                    </div>  
+                </div>
+                </form>
+            </aside>
+
+            <footer>
+                <div class="Sausages">
+                    <div class="textf">
+                        <h1>YNOV B1 INFORMATIQUE 2021</h1>
+                        <h2>Garcia Fabio, Fonseca Dorian, D'autheville Adam, Adonaï Killian</h2>
+                    </div>
+                    <div class="links">
+                        <h3>
+                            <a href="https://www.instagram.com/killianoni/" style="color: whitesmoke;" target="_blank">Instagram</a> |
+                            <a href="https://www.facebook.com/Killian.adn" style="color: whitesmoke;" target="_blank">Facebook</a> |
+                            <a href="https://twitter.com/killianoni" style="color: whitesmoke;" target="_blank">Twitter</a> |
+                            <a href="" style="color: whitesmoke;" target="_blank">Contact</a>
+                        </h3>
+                    </div>
+                </div>
+                </div>
+            </footer>
+        </div>
+    
+    </body>
+
+</html>

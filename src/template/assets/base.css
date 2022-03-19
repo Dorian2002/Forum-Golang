@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    background: url("./images/login.jpg");
+}
+
+.container-grille {
+    min-height: 98vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 40% 1fr;
+    grid-template-rows: 55px 2% 1fr auto;
+}
+
+header {
+    grid-column: span 3;
+    grid-row: 1/2;
+    font-size: 22px;
+    background: url(./images/sausages.jpg);
+    background-position: 50% 62%;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.head-title {
+    grid-column: 1/3;
+    margin-left: 10px;
+    width: 30%;
+    max-height: 22px;
+    font: bolder;
+}
+
+.liste-head {
+    margin-left: 58%;
+    grid-column: 3/4;
+    list-style-type: none;
+    display: flex;
+    gap: 10%;
+
+}
+
+.button {
+	border-radius:15px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+}
+
+.button:hover {
+	background-color:#eae0c2 !important;
+    color: black;
+
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+
+footer {
+    max-height: 130px;
+    grid-column: span 3;
+    margin-top: 5%;
+    grid-row: 4/5;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background: url(./images/coal.jpg);
+    background-position: 50% 62%;
+    background-repeat: no-repeat;
+    
+}

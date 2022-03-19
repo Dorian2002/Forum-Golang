@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Forum BBQ</title>
+        <link rel="stylesheet" href="./assets/base.css">
+        <link rel="stylesheet" href="./assets/profil.css">
+
+    </head>
+    <body>
+        <div class="container-grille">
+
+            <header>
+                
+            <p class= "head-title"> BBQ entre amis </p>
+            
+            <ul class="liste-head">
+                <li><a href="login" class="button" >Login</a></li>
+                <li><a href="register" class="button">Register</a></li>
+            </ul>
+
+            </header>   
+
+
+            
+            <nav>
+                <div class="user">
+                    <p class="navtitle">Navigation:</p>
+                    <ul class="liste-sidenav">
+                        <li><a href="profil" class="button">profil</a></li>
+                        <li><a href="postCreate" class="button">new post</a></li>
+                        <li><a href="#" class="button">My posts</a></li>
+                        <li><a href="#" class="button">My comments</a></li>
+                        <li><a href="#" class="button">My likes</a></li>
+                        <li>
+                            <form action="/logout" method="POST" >
+                                <input type="submit" name="logout" value="Logout" placeholder="Logout" class="button"
+                                style="border:none;
+                                        background:none;
+                                        font-family:Arial;
+                                        font-size:18px;
+                                        font-weight:bold;">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="showprofil">
+                <div class="Titleprofil">
+                    Votre Profil:
+                </div>
+
+                <div class="profilinfo">
+
+                    <div class="info">nom: {{.Nom }}</div>
+                    
+                    <div class="info">prénom: {{ .Prénom }} </div>
+
+                    <div class="info">âge: {{ .Age }} ans </div>
+
+                    <div class="info">username: {{ .Username }} </div>
+                    
+                    <div class="info">mail: {{ .Email }} </div>
+                
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="Sausages">
+                    <div class="textf">
+                        <h1>YNOV B1 INFORMATIQUE 2021</h1>
+                        <h2>Garcia Fabio, Fonseca Dorian, D'autheville Adam, Adonaï Killian</h2>
+                    </div>
+                    <div class="links">
+                        <h3>
+                            <a href="https://www.instagram.com/killianoni/" style="color: whitesmoke;" target="_blank">Instagram</a> |
+                            <a href="https://www.facebook.com/Killian.adn" style="color: whitesmoke;" target="_blank">Facebook</a> |
+                            <a href="https://twitter.com/killianoni" style="color: whitesmoke;" target="_blank">Twitter</a> |
+                            <a href="" style="color: whitesmoke;" target="_blank">Contact</a>
+                        </h3>
+                    </div>
+                </div>
+                </div>
+            </footer>
+        </div>
+    
+    </body>
+    </body>
+
+</html>

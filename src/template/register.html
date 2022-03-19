@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="./assets/register.css">
+    <link rel="stylesheet" href="./assets/base.css">
+</head>
+<body>
+
+    <header>
+                
+        <p class= "head-title"> BBQ entre amis </p>
+        
+        <ul class="liste-head">
+            <li><a href="login" class="button" >Login</a></li>
+            <li><a href="register" class="button">Register</a></li>
+        </ul>
+
+    </header>
+
+<div class="loginbox">
+    <img src="./assets/images/avatar.png" class="avatar">
+        <h1>REGISTER</h1>
+    <form action="/register" method="post">
+        Nom:<input type="text" name="Nom">
+        Prénom:<input type="text" name="Prénom">
+        <br>
+        Username:<input type="text" name="username">
+        Email:<input type="text" name="Email">
+        <br>
+        Password:<input type="password" name="password">
+        Password Verification:<input type="password" name="passwordV">
+        <br>
+        Age:<input type="text" name="age">
+        <br>
+        <input type="submit" value="Register">
+
+        <div>
+            {{ if .WrongPswd }}
+                <p>Les deux mots de passes rentrés doivent être identiques !</p>
+            {{ else }}
+                {{ if .WrongAge }}
+                    <p>L'âge ne peut être composé que de chiffres.</p>
+                {{ else }}
+                    {{ if .AAE }}
+                        <p> Un compte existe dejà avec ces identifiants !</p>
+                    {{ else }}
+                        {{ if .IsRegistering }}
+                            {{ if .IsRegister }}
+                                <p>Vous pouvez désormais vous connecter au BBQ entre amis !</p>
+                                <meta http-equiv="refresh" content="2; URL=login">
+                            {{ else }}
+                                <p>Certains des champs renseignés sont mauvais, veuillez réessayer.</p>
+                            {{ end }}
+                        {{ else}}
+                            <p>Certains des champs renseignés sont vides, veuillez réessayer. </p>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{end}}
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
